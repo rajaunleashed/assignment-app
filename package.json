@@ -17,7 +17,8 @@
     "bootstrap": "^5.2.3",
     "bootstrap-vue": "^2.23.1",
     "vue": "^2.7.14",
-    "vue-router": "^3.0.1"
+    "vue-router": "^3.0.1",
+    "vue-toast-notification": "^0.6.3"
   },
   "devDependencies": {
     "autoprefixer": "^7.1.2",
