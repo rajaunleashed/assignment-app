@@ -7,6 +7,8 @@ import { BootstrapVue, IconsPlugin, ModalPlugin } from 'bootstrap-vue'
 
 import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap-vue/dist/bootstrap-vue.css'
+import './assets/custom.css'
+
 import axios from 'axios'
 import VueToast from 'vue-toast-notification'
 // Import one of the available themes

@@ -2,7 +2,7 @@
   <div class="container">
     <div class="row">
       <div class="col-md-12">
-        <h1 class="text-left">Users <a class="btn btn-xs btn-primary" v-bind:href="`#/users`">Add</a></h1>
+        <h1 class="text-left">Users <a class="btn btn-xs btn-primary" v-bind:href="`#/users/add`">Add</a></h1>
         <table class="table table-responsive">
           <thead>
             <tr>

@@ -29,7 +29,7 @@ export default new Router({
           component: UserListing
         },
         {
-          path: '/users/edit',
+          path: '/users/add',
           name: 'User',
           component: EditAdd
         },

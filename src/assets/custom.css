@@ -1,0 +1,35 @@
+.mt-30 {
+  margin-top: 30px;
+}
+
+#app {
+  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: #2c3e50;
+  margin-top: 60px;
+}
+
+.nav {
+  padding:0;
+  margin-bottom: 20px;
+  width: 100%;
+  background-color: #eee
+}
+.nav li {
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid rgb(220, 218, 218)
+}
+.nav li a {
+  text-decoration: none;
+  color: black
+}
+
+.mt-20 {
+  margin-top: 20px;
+}
+
+.error {
+  color: #ff0000;
+}

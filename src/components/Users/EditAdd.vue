@@ -115,12 +115,3 @@ export default {
   }
 }
 </script>
-
-<style>
-.mt-20 {
-  margin-top: 20px;
-}
-
-.error {
-  color: #ff0000;
-}</style>

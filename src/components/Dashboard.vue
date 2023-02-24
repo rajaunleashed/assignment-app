@@ -39,21 +39,3 @@ export default {
   }
 }
 </script>
-
-<style>
-.nav {
-  padding:0;
-  margin-bottom: 20px;
-  width: 100%;
-  background-color: #eee
-}
-.nav li {
-  display: inline-block;
-  padding: 10px;
-  border-right: 1px solid rgb(220, 218, 218)
-}
-.nav li a {
-  text-decoration: none;
-  color: black
-}
-</style>
