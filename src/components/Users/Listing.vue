@@ -19,7 +19,10 @@
               <td>{{ user.first_name }}</td>
               <td>{{ user.last_name }}</td>
               <td>{{ user.email }}</td>
-              <td><a v-bind:href="`#/users/${user.id}`" class="btn btn-warning">Edit</a></td>
+              <td>
+                <a v-bind:href="`#/users/${user.id}`" class="btn btn-warning">Edit</a>
+                <a @click="onDelete(user.id)" class="btn btn-danger">Delete</a>
+              </td>
             </tr>
           </tbody>
         </table>
@@ -43,16 +46,40 @@ export default {
     }
   },
   mounted () {
-    axios.get(process.env.API_PATH + '/users')
-      .then(result => {
-        if (result.data.data.users) {
-          this.users = result.data.data.users
-        }
-      })
+    this.fetchUsers()
   },
   methods: {
     edit: function (userId) {
       console.log('userId', userId)
+    },
+    fetchUsers: function () {
+      axios.get(process.env.API_PATH + '/users')
+        .then(result => {
+          if (result.data.data.users) {
+            this.users = result.data.data.users
+          }
+        })
+    },
+    onDelete: function (userId) {
+      console.log('userId', userId)
+      const retVal = confirm('Are you sure want to delete?')
+      if (retVal) {
+        axios.delete(process.env.API_PATH + '/users/' + userId)
+          .then(result => {
+            if (result.data.statusCode === 200) {
+              this.$toast.open({
+                message: result.data.data.message,
+                type: 'success'
+              })
+              this.fetchUsers()
+            }
+          }).catch(error => {
+            this.$toast.open({
+              message: error.response.data.data.message,
+              type: 'success'
+            })
+          })
+      }
     }
   }
 }
